@@ -1,93 +1,143 @@
-/* General Card Styling */
-.bill-card {
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+/* Base Styles for Cards */
+.custom-card {
+    position: relative;
+    transition: all 0.3s ease;
     border-radius: 10px;
-    margin-bottom: 20px;
-    background-color: #fcd6f7;
-    padding: 20px;
-    transition: all 0.3s ease-in-out; /* Smooth transition for hover effects */
-    border: 2px solid transparent; /* Initial border is transparent */
-}
-
-/* Hover Effect to Highlight Card */
-.bill-card:hover {
-    background-color: #9beaf6; /* Light background on hover */
-    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2); /* Subtle shadow to create depth */
-    transform: translateY(-5px); /* Lift the card slightly */
-    border-color: #007bff; /* Change border color to blue on hover */
-}
-
-/* Button Customization */
-.delete-btn, .edit-btn {
-    background-color: #007bff;
+  }
+  .add-card{
+      border: 3px solid #16c47f;
+  }
+  .custom-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .should-be-paid {
+    border: 3px solid #ff4d4d;
+  }
+  
+  .should-be-paid::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 20px;
+    height: 20px;
+    background-color: #ff4d4d;
+    border-top-left-radius: 5px;
+  }
+  
+  .should-be-paid .button-edit,
+  .should-be-paid .button-delete {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ff4d4d;
     color: white;
-    font-weight: bold;
-    border-radius: 5px;
-    padding: 10px 15px;
-    transition: background-color 0.3s ease-in-out;
-    display: flex; /* Use flexbox for centering */
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    text-align: center; /* Ensure text is centered */
-}
-
-.delete-btn:hover, .edit-btn:hover {
-    background-color: #d93636;
-}
-
-/* Chip Customization */
-.chip {
-    background-color: #d93636;
+    border: none;
+  }
+  
+  .not-paid {
+    border: 3px solid #16c47f;
+  }
+  
+  /* Styles for <hr> when not paid */
+  
+  .not-paid .button-edit,
+  .not-paid .button-delete,
+  .add-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #16c47f;
     color: white;
-    font-size: 15px;
-    font-weight: bold;
-    display: block;
-}
-
-/* Layout Adjustments */
-.font-size {
-    font-size: 18px;
-}
-
-.float-right {
-    float: right;
-}
-
-p {
-    margin: 10px 0;
-}
-
-/* Add custom styling for the Bill Card */
-.card .card-content {
+    border: none;
+  }
+  .add-btn {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* Styling for Buttons */
+  .button-edit,
+  .button-delete {
     padding: 10px;
-}
-
-/* Additional Styling */
-hr {
-    border-top: 1px solid #ddd;
-}
-
-/* Adding some margin for spacing between cards */
-.container {
-    padding: 20px;
-}
-
-/* Header Styling */
-.heading {
-    color: lightseagreen;
-}
-
-/* Category Dropdown */
-.margin-top {
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* Style for <hr> */
+  
+  .font-size {
+    font-size: 20px;
+  }
+  
+  .float-right {
+    float: right;
+  }
+  
+  .button-color {
+    color: white;
+  }
+  
+  .margin-top {
     margin-top: 30px;
-}
-
-.margin-left {
+  }
+  
+  .margin-left {
     margin-left: 80px;
-}
-
-/* Preloader Styling */
-.preloader {
+  }
+  
+  .preloader {
     margin-top: 100px;
     margin-left: 250px;
-}
+  }
+  
+  .heading {
+    color: #16c47f;
+  }
+  
+  .hero-heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 0px;
+    color: #000;
+    margin-top: 10px;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  h5 {
+    font-weight: bold;
+    color: black !important;
+    text-align: center;
+  }
+  .amt {
+    font-weight: bold;
+  }
+  .legend-container {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 16px;
+    font-weight: 600;
+  }
+  
+  .legend-text {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  
+  .highlight-should-be-paid {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: #ff4d4d; /* Color for 'should be paid' bills */
+    border-radius: 5px;
+    margin-right: 10px;
+  }
+  
+  /* Optional: Add spacing for the legend text */
+  .legend-text {
+    color: #333;
+  }

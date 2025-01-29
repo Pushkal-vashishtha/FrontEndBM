@@ -85,17 +85,31 @@ class Bills extends Component {
     }
   
     return (
-
       //rendering bills
       <div className="container">
-        <Dropdown onSelect={this.onSelect} bills={bills} category={this.state.category}/>
-          <Row>
-          {bills_to_render && bills_to_render.map(bill => (
-            <Col className="col-sm-12 col-md-12 col-lg-6">
-            <Bill key = {bill.id} bill = {bill} />
-            </Col>
-          ))}
-          </Row>
+        <div className="hero-heading">
+          <h5>View Your Bills Here</h5>
+        </div>
+        <Dropdown
+          onSelect={this.onSelect}
+          bills={bills}
+          category={this.state.category}
+        />
+        <div className="legend-container">
+          <span className="legend-text">
+            <span className="highlight-should-be-paid"></span>
+            <p className="legend-content">Bills that should be paid</p>
+          </span>
+        </div>
+
+        <Row>
+          {bills_to_render &&
+            bills_to_render.map((bill) => (
+              <Col key={bill.id} className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <Bill key={bill.id} bill={bill} />
+              </Col>
+            ))}
+        </Row>
       </div>
     );   
   }

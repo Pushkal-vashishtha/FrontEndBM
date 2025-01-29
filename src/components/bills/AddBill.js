@@ -71,21 +71,21 @@ class AddBill extends Component {
         <Col m={3}></Col> 
 
         <Col m={6} l={4} s={12}>
-        <Card className="margin-top">
+        <Card className="margin-top add-card">
           <h5 className="heading">Add a Bill</h5><hr></hr> 
           <span><TextInput value={amount} type="number" placeholder="Enter Amount" 
-           onChange={this.handleAmount} label="amount"/></span>
+           onChange={this.handleAmount} label="Amount Payable"/></span>
 
           <span><TextInput value={category} type="text" placeholder="Enter Category" 
-           onChange={this.handleCategory} label="category"/></span>
+           onChange={this.handleCategory} label="Category"/></span>
 
           <span><TextInput value={description} type="text" placeholder="Enter Description" 
-           onChange={this.handleDescription} label="description"/></span>
+           onChange={this.handleDescription} label="Description"/></span>
 
           <span><TextInput value={date} type="date" placeholder="Enter Date" 
-           onChange={this.handleDate} label="date"/></span>
+           onChange={this.handleDate} label="Date"/></span>
 
-          <Button waves="light" onClick={this.onSubmit}>Add</Button>
+          <Button waves="light" onClick={this.onSubmit} className="add-btn">Add</Button>
         </Card>
         </Col>
 

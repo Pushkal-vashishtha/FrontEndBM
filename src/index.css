@@ -1,5 +1,6 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: "Gilroy", sans-serif;
+  background: linear-gradient(to top left,#ccffdd,#e6ffe9, #f2fff1, #ffffff);
 }
